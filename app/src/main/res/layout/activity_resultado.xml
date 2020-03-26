@@ -15,15 +15,15 @@
 
     <TextView
         android:id="@+id/id_nombre"
-        android:layout_width="390dp"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_image"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="41dp"
+        android:layout_marginLeft="-100dp"
         android:layout_marginTop="26dp"
         android:text="Nombre"
         android:textColor="#000"
-        android:textSize="22sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
@@ -32,10 +32,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/id_nombre"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="166dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginLeft="-0dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
         android:text="Especie"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/id_edad"
@@ -44,20 +45,22 @@
         android:layout_below="@+id/id_especie"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="-280dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/id_image"
         android:text="Edad"
+        android:textColor="#000"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/id_descripcion"
-        android:layout_width="409dp"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/id_edad"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="-389dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginLeft="-411dp"
+        android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/id_nombre"
         android:text="Descripcion"
+        android:textColor="#000"
         android:textSize="18sp" />
 </RelativeLayout>

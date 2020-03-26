@@ -9,8 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ResultadoActivity extends AppCompatActivity {
-    ImageView img;
-    TextView nombre,especie,edad,descripcion;
+    private ImageView img;
+    private TextView nombre,especie,edad,descripcion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +29,15 @@ public class ResultadoActivity extends AppCompatActivity {
         String especie_i= intent.getStringExtra("especie");
         String edad_i= intent.getStringExtra("edad");
         String descripcion_i= intent.getStringExtra("descripcion");
+        String img_i= intent.getStringExtra("img");
 
-        this.nombre.setText(nombre_i);
-        this.especie.setText(especie_i);
-        this.edad.setText(edad_i);
-        this.descripcion.setText(descripcion_i);
+        String lowerCountryCode = img_i.toLowerCase();
+        int id = getResources().getIdentifier(lowerCountryCode, "drawable", getPackageName());
+        this.img.setImageResource(id);
+        this.nombre.setText("Nombre: "+nombre_i);
+        this.especie.setText("Epecie: "+especie_i);
+        this.edad.setText("Vive: "+edad_i);
+        this.descripcion.setText("Descripcion: "+descripcion_i);
+
     }
 }

@@ -34,30 +34,36 @@ public class AdapterAnimal extends RecyclerView.Adapter <HolderAnimal>{
     @Override
     public void onBindViewHolder(@NonNull HolderAnimal holder, int position) {
 
-        holder.img.setImageResource(arrAnimal.get(position).getImg());
-        holder.nombre.setText(arrAnimal.get(position).getNombre());
-        holder.especie.setText(arrAnimal.get(position).getEspecie());
-        holder.edad.setText(arrAnimal.get(position).getEdad());
-        holder.descripcion.setText(arrAnimal.get(position).getDescripcion());
 
+    //    String lowerCountryCode = arrAnimal.get(position).getImg().toLowerCase();
+    //    int id = getResources().getIdentifier(lowerCountryCode, "drawable", getPackageName());
+       // this.img.setImageResource(id);
+      //  holder.img.setImageResource(id);
+       // holder.img.setImageResource(arrAnimal.get(position).getImg());
+        // holder.edad.setText(arrAnimal.get(position).getEdad());
+
+        holder.nombre.setText("Nombre: "+arrAnimal.get(position).getNombre());
+        holder.especie.setText("Especie: "+arrAnimal.get(position).getEspecie());
+        holder.descripcion.setText("Descripcion: "+arrAnimal.get(position).getDescripcion());
         holder.setClickItem(new ClickItem() {
             @Override
             public void onClickItem(View v, int i) {
 
              //   Animal ani= new Animal();
+              String img=arrAnimal.get(i).getImg();
               String nombre=arrAnimal.get(i).getNombre();
               String especie=arrAnimal.get(i).getEspecie();
               String edad=arrAnimal.get(i).getEdad();
               String descripcion=arrAnimal.get(i).getDescripcion();
-                //BitmapDrawable bitmapDrawable=(BitmapDrawable)HolderAnimal.img.getDrawable();
-                //Bitmap bitmap = bitmapDrawable.getBitmap();
+
             Intent intetn = new Intent(cont,ResultadoActivity.class);
 
+            intetn.putExtra("img",img);
             intetn.putExtra("nombre",nombre);
             intetn.putExtra("especie",especie);
             intetn.putExtra("edad",edad);
             intetn.putExtra("descripcion",descripcion);
-                cont.startActivity(intetn);
+            cont.startActivity(intetn);
             }
         });
     }

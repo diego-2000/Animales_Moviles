@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Animal extends AppCompatActivity {
 
-    private String nombre,especie,edad,descripcion;
-    private int img;
+    private String nombre;
+    private String especie;
+    private String edad;
+    private String descripcion;
+    private String img;
 
     public Animal() {
     }
@@ -42,11 +45,11 @@ public class Animal extends AppCompatActivity {
         this.descripcion = descripcion;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 }
